@@ -1,0 +1,9 @@
+.card-body-stars {
+    list-style-type: none;
+  }
+  
+  .u-clearfix {
+    display: flex;
+  }
+
+  /* ul li { list-style: none; display: inline; } */
