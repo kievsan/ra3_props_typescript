@@ -1,6 +1,7 @@
 import Stars from "./components/films_stars/Stars";
+import Listing from "./components/listing/Listing";
 
-import './App.css';
+import products from './components/listing/data/etsy.json';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           <Stars count={10.7} />
           {/* <Stars count={{number: 1}} />    ts Err! */}
           {/* <Stars count={"1"} />    ts Err! */}
+          {
+            <Listing items={products}/>
+          }
       </>
   );
 }
