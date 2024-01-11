@@ -24,7 +24,7 @@ export default function Listing(props: ListingProps) {
             quantity <= 20 ? "level-medium" : "level-high")
     }
     const filteredItems = items.filter( item => item.title);
-    
+
     const dataItems = filteredItems.map( item =>
         (
             <div className={classes["item"]} key={item.listing_id}>
@@ -43,22 +43,6 @@ export default function Listing(props: ListingProps) {
                     <p className={`${classes["item-quantity"]} ${classes[quantityLevel(item.quantity)]}`}>
                         {item.quantity} left
                     </p>
-                    
-{/*                     { item.currency_code === 'USD' 
-                        ? <p className={classes["item-price"]}>${item.price}</p>
-                        : ( item.currency_code === 'EUR'                
-                            ? <p className={classes["item-price"]}>€{item.price}</p>
-                            : <p className={classes["item-price"]}>{item.price} {item.currency_code}</p>
-                        )
-                    } */}
-
-{/*                     { item.quantity && item.quantity <= 10
-                        ? <p className={`${classes["item-quantity"]} ${classes["level-low"]}`}>{item.quantity} left</p>
-                        : (item.quantity && item.quantity <= 20
-                            ? <p className={`${classes["item-quantity"]} ${classes["level-medium"]}`}>{item.quantity} left</p>
-                            : <p className={`${classes["item-quantity"]} ${classes["level-high"]}`}>{item.quantity} left</p>
-                        )
-                    } */}
                 </div>
             </div>      
         )
